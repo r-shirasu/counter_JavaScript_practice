@@ -37,6 +37,7 @@ button {
   width: 110px;
   height: 35px;
   font-size: 17px;
+  letter-spacing: 0.15em;
   font-family: monospace;
 }
 button:hover {
@@ -46,6 +47,7 @@ button:hover {
   width: 110px;
   height: 35px;
   font-size: 17px;
+  letter-spacing: 0.15em;
   font-family: monospace;
   cursor: pointer;
 }
