@@ -1,20 +1,29 @@
-// 数値の設定
+"use strict";
+
+// 数値の設定;
 let count = 0;
 
 // id属性値・class属性値などを意識せずにHTML要素を取得
 const getCount = document.querySelector("#value");
-// const btns = document.querySelectorAll(".btn");
-const btns = ["cat", "dog", "fox"];
+const btns = document.querySelectorAll(".btn");
+// const decreaseButton = document.getElementById("decrease");
+// console.log(decreaseButton);
 
-// 全てのボタンのイベントを取り出す処理
-btns.forEach((item, items, itemss) => {
+// decreaseButton.addEventListener("click", () => {
+//   console.log("decreaseButton");
+// });
+
+// 全てのボタンのイベントを取り出す処理;
+btns.forEach((btn) => {
+  // btns.for(let i = 0; i < btns.length; i ++) {}
   //   console.log("item", "items", "itemss");
-  console.log("item", item);
-  console.log("items", items);
-  console.log("itemss", itemss);
-  return;
+  //   console.log("item", item);
+  //   console.log("items", items);
+  //   console.log("itemss", itemss);
+  //   return;
   //   console.log(btn);
-  btns.addEventListner("click", () => {
+  console.log(btn);
+  btn.addEventListener("click", (e) => {
     const styles = e.currentTarget.classList;
     if (styles.contains("decrease")) {
       count--;
@@ -23,7 +32,7 @@ btns.forEach((item, items, itemss) => {
     } else {
       count = 0;
     }
-    value.textContent = count;
+    getCount.textContent = count;
   });
 });
 
