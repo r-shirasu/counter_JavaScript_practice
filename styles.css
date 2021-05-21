@@ -1,0 +1,51 @@
+html {
+  font-family: sans-serif;
+}
+
+.countainer {
+  width: 400px;
+  justify-content: center;
+  margin: auto;
+  flex-direction: column;
+  margin-top: 150px;
+}
+
+h1 {
+  display: block;
+  text-align: center;
+  font-size: 4em;
+}
+
+#value {
+  font-size: 4.5em;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
+
+.button-container {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+button {
+  background-color: aliceblue;
+  border-radius: 4px;
+  width: 110px;
+  height: 35px;
+  font-size: 17px;
+  font-family: monospace;
+}
+button:hover {
+  background-color: black;
+  color: aliceblue;
+  border-radius: 4px;
+  width: 110px;
+  height: 35px;
+  font-size: 17px;
+  font-family: monospace;
+  cursor: pointer;
+}
