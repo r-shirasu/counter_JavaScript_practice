@@ -22,8 +22,9 @@ btns.forEach((btn) => {
   //   console.log("itemss", itemss);
   //   return;
   //   console.log(btn);
-  console.log(btn);
+  btn.addEventListener;
   btn.addEventListener("click", (e) => {
+    // イベントハンドラが実際に付与された要素を指定（今回はbutton)
     const styles = e.currentTarget.classList;
     if (styles.contains("decrease")) {
       count--;
@@ -33,6 +34,18 @@ btns.forEach((btn) => {
       count = 0;
     }
     getCount.textContent = count;
+
+    if (count < 0) {
+      getCount.setAttribute("id", "decreasecolor");
+    }
+
+    if (count > 0) {
+      getCount.setAttribute("id", "increasecolor");
+    }
+
+    if (count === 0) {
+      getCount.setAttribute("id", "zerocolor");
+    }
   });
 });
 
