@@ -1,30 +1,15 @@
-"use strict";
+"use stirict";
 
-// 数値の設定;
+// 数値の設定
 let count = 0;
 
-// id属性値・class属性値などを意識せずにHTML要素を取得
-const getCount = document.querySelector("#value");
-const btns = document.querySelectorAll(".btn");
-// const decreaseButton = document.getElementById("decrease");
-// console.log(decreaseButton);
+// ボタンのまとまりを定義（HTML要素の取得)
+const buttons = document.querySelectorAll(".btn");
+const getCount = document.getElementById("value");
 
-// decreaseButton.addEventListener("click", () => {
-//   console.log("decreaseButton");
-// });
-
-// 全てのボタンのイベントを取り出す処理;
-btns.forEach((btn) => {
-  // btns.for(let i = 0; i < btns.length; i ++) {}
-  //   console.log("item", "items", "itemss");
-  //   console.log("item", item);
-  //   console.log("items", items);
-  //   console.log("itemss", itemss);
-  //   return;
-  //   console.log(btn);
-  btn.addEventListener;
+// ボタンのイベント
+buttons.forEach((btn) => {
   btn.addEventListener("click", (e) => {
-    // イベントハンドラが実際に付与された要素を指定（今回はbutton)
     const styles = e.currentTarget.classList;
     if (styles.contains("decrease")) {
       count--;
@@ -35,12 +20,11 @@ btns.forEach((btn) => {
     }
     getCount.textContent = count;
 
-    if (count < 0) {
-      getCount.setAttribute("id", "decreasecolor");
-    }
-
     if (count > 0) {
       getCount.setAttribute("id", "increasecolor");
+    }
+    if (count < 0) {
+      getCount.setAttribute("id", "decreasecolor");
     }
 
     if (count === 0) {
@@ -49,14 +33,6 @@ btns.forEach((btn) => {
   });
 });
 
-// ①item
-// 要素＝DECREASE
-// ②items  (index) 0
-// ③itemss
-// 配列　btns
-
-// ①item   //
-// 要素＝INCREASE
-// ②items  (index) 1
-// ③itemss
-// 配列　btns
+// ①decrease押して-
+// ②reset押したら0
+// ③increase押して++
