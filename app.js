@@ -12,7 +12,7 @@ btn.addEventListener("click", (e) => {
 });
 // });
 
-// let count = 01;
+// let count = 012;
 
 // const buttons = document.querySelectorAll(".btn");
 
